@@ -17,5 +17,5 @@ jobs:
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cat data/test.csv >> report.md
+          cat "MAJOR CHANGES DONE" >> report.md
           cml send-comment report.md
