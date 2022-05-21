@@ -21,5 +21,6 @@ jobs:
               env:
                   REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
-                  cat data/test.csv >> report.md
+                  python scripts/evaluate_decision.py
+                  cat metrics/decision_tree_metrics.json >> report.md
                   cml send-comment report.md
